@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<buses xmlns="http://www.example.com/buses"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.example.com/buses BusesXsd.xsd">
+    <bus>
+        <name>Ellissa</name>
+    </bus>
+    <bus>
+        <name>Albert</name>
+    </bus>
+    <bus>
+        <name>Kendall</name>
+    </bus>
+
+</buses>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/buses"
+        xmlns:tns="http://www.example.com/buses"
+        elementFormDefault="qualified">
+    <element name="buses">
+        <complexType>
+            <sequence>
+                <element name="bus"
+                         type="tns:Bus"
+                         maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <complexType name="Bus">
+        <all>
+            <element name="name" type="string"/>
+        </all>
+    </complexType>
+</schema>
