@@ -53,7 +53,7 @@ public class BusDOMBuilder extends AbstractEntitiesBuilder<Bus> {
     }
 
     private Bus buildBus(Element busElement) {
-        Bus bus = new Bus();
+        Bus bus = new Bus(3,5);
         return bus;
     }
 }

@@ -17,9 +17,9 @@ public class EntityParserTest {
     private Set<Bus> expectedSet = new LinkedHashSet<>();
     @Before
     public void fillSet(){
-        Bus b1 = new Bus();
-        Bus b2 = new Bus();
-        Bus b3 = new Bus();
+        Bus b1 = new Bus(1,2);
+        Bus b2 = new Bus(1,3);
+        Bus b3 = new Bus(1,4);
         expectedSet.addAll(Arrays.asList(b1,b2,b3));
     }
 
