@@ -3,13 +3,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://www.example.com/buses BusesXsd.xsd">
     <bus>
-        <name>Ellissa</name>
+        <id>1</id>
+        <capacity>5</capacity>
     </bus>
     <bus>
-        <name>Albert</name>
+        <id>2</id>
+        <capacity>4</capacity>
     </bus>
     <bus>
-        <name>Kendall</name>
+        <id>3</id>
+        <capacity>3</capacity>
     </bus>
 
 </buses>

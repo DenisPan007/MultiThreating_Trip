@@ -5,12 +5,12 @@ import entity.Entity;
 import java.util.HashSet;
 import java.util.Set;
 
-public abstract class AbstractEntitiesBuilder<T extends Entity>  {
+public abstract class BaseEntitiesBuilder<T extends Entity>  {
     protected Set<T> entities;
-    public AbstractEntitiesBuilder() {
+    public BaseEntitiesBuilder() {
         entities = new HashSet<>();
     }
-    public AbstractEntitiesBuilder(Set<T> entities) {
+    public BaseEntitiesBuilder(Set<T> entities) {
         this.entities = entities;
     }
     public Set<T> getEntities() {

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<passengers xmlns="http://www.example.com/passengers"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.example.com/passengers PassengersXsd.xsd">
+    <passenger>
+        <name>Den1</name>
+        <destination>2</destination>
+    </passenger>
+    <passenger>
+        <name>Den2</name>
+        <destination>3</destination>
+    </passenger>
+    <passenger>
+        <name>Den3</name>
+        <destination>4</destination>
+    </passenger>
+
+</passengers>

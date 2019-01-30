@@ -1,6 +1,7 @@
 package service.parser.builder;
 
 import entity.Bus;
+import entity.BusEnum;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,26 +16,25 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 
-public class BusDOMBuilder extends AbstractEntitiesBuilder<Bus> {
+public class BusDomBuilder extends BaseEntitiesBuilder<Bus> {
     private static final Logger LOGGER = LogManager.getLogger();
 
     @Override
     public void buildSetEntities(String fileName) throws BuilderException {
-        Document doc;
-        LOGGER.log(Level.DEBUG, "Start parsing...");
+        LOGGER.debug("Start parsing...");
         try {
             DocumentBuilder docBuilder;
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             try {
                 docBuilder = factory.newDocumentBuilder();
             } catch (ParserConfigurationException e) {
-                LOGGER.log(Level.ERROR, e.getMessage());
+                LOGGER.error(e);
                 throw new BuilderException(e);
             }
-            doc = docBuilder.parse(fileName);
+            Document doc = docBuilder.parse(fileName);
             Element root = doc.getDocumentElement();
             entities.clear();
-            NodeList busesList = root.getElementsByTagName("");
+            NodeList busesList = root.getElementsByTagName(BusEnum.BUS.getValue());
             for (int i = 0; i < busesList.getLength(); i++) {
                 Element element = (Element) busesList.item(i);
                 Bus bus = buildBus(element);
@@ -53,7 +53,9 @@ public class BusDOMBuilder extends AbstractEntitiesBuilder<Bus> {
     }
 
     private Bus buildBus(Element busElement) {
-        Bus bus = new Bus(3,5);
+        Bus bus = new Bus();
+        bus.setId(Long.valueOf(getElementTextContent(busElement, BusEnum.ID.getValue())));
+        bus.setCapacity(Integer.valueOf(getElementTextContent(busElement,BusEnum.CAPACITY.getValue())));
         return bus;
     }
 }

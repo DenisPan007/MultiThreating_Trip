@@ -8,6 +8,9 @@ public class Route extends  Entity {
     private int number;
     private List<BusStopDispatcher> list;
 
+    public Route() {
+    }
+
     public Route(int number, List<BusStopDispatcher> listOfBusStops) {
         this.number = number;
         this.list = listOfBusStops;

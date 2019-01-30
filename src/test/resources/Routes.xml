@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<routes xmlns="http://www.example.com/routes"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.example.com/routes RoutesXsd.xsd">
+    <route>
+        <number>1</number>
+        <busStops>
+            <stop>1</stop>
+            <stop>2</stop>
+            <stop>3</stop>
+            <stop>4</stop>
+        </busStops>
+    </route>
+    <route>
+        <number>2</number>
+        <busStops>
+            <stop>4</stop>
+            <stop>3</stop>
+            <stop>2</stop>
+            <stop>1</stop>
+        </busStops>
+    </route>
+    <route>
+        <number>3</number>
+        <busStops>
+            <stop>1</stop>
+            <stop>3</stop>
+            <stop>4</stop>
+            <stop>2</stop>
+        </busStops>
+    </route>
+
+</routes>

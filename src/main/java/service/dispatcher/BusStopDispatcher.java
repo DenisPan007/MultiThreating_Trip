@@ -13,10 +13,23 @@ public class BusStopDispatcher {
     private Semaphore semaphore;
     private List<Passenger> listOfPassengers;
 
+    public BusStopDispatcher() {
+        this.semaphore = new Semaphore(1);
+        this.listOfPassengers = new ArrayList<>();
+    }
+
     public BusStopDispatcher(BusStop busStop, Passenger... listOfPassengers) {
         this.busStop = busStop;
         this.listOfPassengers = new ArrayList<>(Arrays.asList(listOfPassengers));
         this.semaphore = new Semaphore(1);
+    }
+
+    public void setBusStop(BusStop busStop) {
+        this.busStop = busStop;
+    }
+
+    public void setListOfPassengers(List<Passenger> listOfPassengers) {
+        this.listOfPassengers = listOfPassengers;
     }
 
     public BusStop getBusStop() {
@@ -27,7 +40,7 @@ public class BusStopDispatcher {
         return semaphore;
     }
 
-    public List<Passenger> getListOfPassengers() throws InterruptedException{
+    public List<Passenger> getListOfPassengers() throws InterruptedException {
         semaphore.acquire();
         return listOfPassengers;
     }

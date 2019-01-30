@@ -4,6 +4,9 @@ public class Passenger extends Entity{
    private String name;
    private BusStop destinationBusStop;
 
+    public Passenger() {
+    }
+
     public Passenger(String name, BusStop destinationBusStop) {
         this.name = name;
         this.destinationBusStop = destinationBusStop;

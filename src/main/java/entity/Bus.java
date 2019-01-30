@@ -2,9 +2,10 @@ package entity;
 
 public class Bus extends  Entity {
     private long id;
-    private final int capacity;
+    private  int capacity;
 
-
+    public Bus() {
+    }
     public Bus(long id, int capacity) {
         this.id = id;
         this.capacity = capacity;
@@ -20,6 +21,10 @@ public class Bus extends  Entity {
 
     public int getCapacity() {
         return capacity;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
     }
 
     @Override
